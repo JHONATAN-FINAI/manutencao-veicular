@@ -6,7 +6,7 @@ import {
   PieChart, Pie, Cell, AreaChart, Area
 } from 'recharts'
 import { Calendar, Download, RefreshCcw } from 'lucide-react'
-import { format, subMonths, startOfMonth, endOfMonth, parseISO, isWithinInterval } from 'date-fns'
+import { format, subMonths, startOfMonth, endOfMonth, parseISO } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 
 import { supabase } from '@/lib/supabase'
@@ -64,7 +64,6 @@ export default function RelatoriosPage() {
   }, [startDate, endDate])
 
   useEffect(() => {
-    // eslint-disable-next-line
     fetchData()
   }, [fetchData])
 
